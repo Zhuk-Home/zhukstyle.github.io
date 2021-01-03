@@ -1,0 +1,420 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/* 
+
+TODO Fonts
+* font-family: 'Varela Round';
+* font-family: 'Turret Road';
+* font-family: "Open Sans";
+* font-family: 'Pacifico', cursive;
+* font-family: 'Source Sans Pro', sans-serif;
+* font-family: 'Lobster', cursive;
+
+*/
+header {
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(23, 23, 50, 0.7);
+  z-index: 1001;
+}
+header .logo {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  font-family: "Lobster", cursive;
+  cursor: default;
+}
+header nav {
+  text-align: center;
+}
+header nav ul {
+  list-style: none;
+}
+header nav .main {
+  display: flex;
+  justify-content: center;
+}
+header nav .main > li {
+  height: 40px;
+  margin: 0 2%;
+}
+header nav .main > li a {
+  height: 100%;
+  border-left: 1px solid #171732;
+}
+header nav a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: capitalize;
+  display: block;
+  padding: 11px 15px;
+  font-size: 16px;
+  transition: background-color 0.5s ease-in-out;
+  font-family: "Raleway", sans-serif;
+}
+header nav a:hover {
+  background-color: #24244e;
+}
+header nav .drop li {
+  display: none;
+  opacity: 0;
+  transform-origin: top center;
+}
+header nav .drop li a {
+  background-color: rgba(23, 23, 50, 0.7);
+  padding: 10px 0;
+}
+header nav .drop li a:hover {
+  background-color: #24244e;
+}
+header nav .main li:hover .menu6 li:first-of-type {
+  display: block;
+  animation: menu6 0.3s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+header nav .main li:hover .menu6 li:nth-of-type(2) {
+  display: block;
+  animation: menu6 0.3s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+header nav .main li:hover .menu6 li:nth-of-type(3) {
+  display: block;
+  animation: menu6 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+header nav .main li:hover .menu6 li:last-of-type {
+  display: block;
+  animation: menu6 0.3s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+@keyframes menu6 {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.head_block {
+  width: 100%;
+  height: 100vh;
+  background: #b6e2ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 77px;
+  background: #1abc9c;
+  background: url(../img/Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_2560x1440.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Lobster", cursive;
+  animation: head_block_up 4s ease-in-out;
+}
+.head_text_1 {
+  opacity: 0;
+  animation: lol 2s cubic-bezier(0.38, 1.24, 0.81, 1.13) 1s, opacity 0.9s linear alternate forwards 1s, opacity_end 0.7s linear alternate forwards 6.3s, lol_end 1s ease-in 6s;
+  cursor: default;
+}
+
+#head_block:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.493);
+  animation: black_head 3.5s ease-in-out;
+}
+
+#head_block.head_block:before {
+  content: "";
+  -moz-transition: background-color 3s ease;
+  -webkit-transition: background-color 3s ease;
+  -ms-transition: background-color 3s ease;
+  transition: background-color 3s ease;
+  transition-property: background-color;
+  transition-duration: 3s;
+  transition-timing-function: ease;
+  transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -webkit-transition-delay: 1s;
+  -ms-transition-delay: 1s;
+  transition-delay: 1s;
+}
+
+.min_fz {
+  font-size: 50px !important;
+  text-align: center;
+}
+
+@keyframes black_head {
+  0% {
+    background-color: black;
+  }
+  70% {
+    background-color: black;
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.493);
+  }
+}
+@keyframes lol {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity_end {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes lol_end {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  z-index: 1001;
+}
+
+.spinner {
+  animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% {
+    stroke: #4285F4;
+  }
+  25% {
+    stroke: #DE3E35;
+  }
+  50% {
+    stroke: #F7C223;
+  }
+  75% {
+    stroke: #1B9A59;
+  }
+  100% {
+    stroke: #4285F4;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
+.arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+  background-size: contain;
+  cursor: pointer;
+}
+
+.bounce {
+  opacity: 0;
+  animation: bounce 2s infinite 4s, opacity 0.5s ease-in-out forwards 3s, lol 1s cubic-bezier(0.38, 1.24, 0.81, 1.13) 3s;
+}
+
+.arrow_block a {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -25px;
+  width: 50px;
+  height: 60px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes lol {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.zatichka {
+  width: 100%;
+  height: 100vh;
+  background: url(https://readd.org/wp-content/uploads/2020/06/photo-1540051834522-7248234b9b4d.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.zatichka_2 {
+  width: 100%;
+  height: 100vh;
+  background: url(https://static-cse.canva.com/blob/241536/%D0%9E%D1%81%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5-%D0%BE%D0%B1%D0%BE%D0%B8-%D0%BD%D0%B0-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9-%D1%81%D1%82%D0%BE%D0%BB-%D0%BE%D1%82%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.zatichka_3 {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_2560x1440.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
