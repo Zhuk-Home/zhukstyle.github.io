@@ -188,6 +188,11 @@ header nav .main li:hover .menu6 li:last-of-type {
     justify-content: center;
     background-color: rgba(23, 23, 50, 0.7);
   }
+  header .logo {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
   header nav .main {
     display: block;
     position: absolute;
