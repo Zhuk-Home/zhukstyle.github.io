@@ -18,7 +18,7 @@ function aaa(selector, interval) {
 }
 
 aaa('.head_block > .head_text_1', 7000); // TODO End Animation
-// TODO Arrows Bounse
+// TODO Arrows Bounse Start
 
 $(document).ready(function () {
   $(".arrow_block").on("click", "a", function (event) {
@@ -33,4 +33,10 @@ $(document).ready(function () {
       scrollTop: top
     }, 1500);
   });
-});
+}); // TODO Arrows Bounse End
+// TODO Header Mobile Start
+
+$('#burger').on('click', function () {
+  $('.burger_block').toggleClass('active');
+  $('.main').toggleClass('menu_active');
+}); // TODO Header Mobile End
