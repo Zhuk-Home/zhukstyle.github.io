@@ -46,6 +46,7 @@ $('#burger').on('click', function () {
         
     $('.burger_block').toggleClass('active');
     $('.main').toggleClass('menu_active');
+    $('body').toggleClass('lock');
 
 })
  // TODO Header Mobile End

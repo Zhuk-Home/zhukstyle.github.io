@@ -22,6 +22,8 @@ header {
     justify-content: space-around;
     background-color: rgba(23, 23, 50, 0.7);
     z-index: 1001;
+    opacity: 0;
+    animation: header_start 2s ease-in-out 10s forwards;
 
     .logo {
         position: absolute;
@@ -71,8 +73,6 @@ header {
                 background-color: rgb(36, 36, 78);
             }
         }
-
-
 
         .drop li {
             display: none;
@@ -126,6 +126,16 @@ header {
             }
         }
 
+        @keyframes header_start {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
         // TODO Anim End
     }
 }
@@ -133,6 +143,10 @@ header {
 // TODO END Header
 // TODO Header Mobile Start
 @media (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
+
     header {
         position: fixed;
         width: 100%;
@@ -183,38 +197,38 @@ header {
 
             .drop li {
                 display: none;
-                position: relative;
-                top: 0;
-                left: 65%;
+                position: absolute;
+                left: 50%;
+
             }
 
             .drop li a {
-                width: 200px;
+                width: 130px;
                 background: #0E7F9B;
                 font-size: 30px;
             }
 
             .main li:hover .menu1 li:first-of-type {
-
+                top: 60%;
                 animation: menu1 0.3s ease-in-out forwards;
                 animation-delay: 0.3s;
 
             }
 
             .main li:hover .menu1 li:nth-of-type(2) {
-
+                top: 67%;
                 animation: menu1 0.3s ease-in-out forwards;
                 animation-delay: 0.6s;
             }
 
             .main li:hover .menu1 li:nth-of-type(3) {
-
+                top: 73%;
                 animation: menu1 0.3s ease-in-out forwards;
                 animation-delay: 0.9s;
             }
 
             .main li:hover .menu1 li:last-of-type {
-
+                top: 79%;
                 animation: menu1 0.3s ease-in-out forwards;
                 animation-delay: 1.2s;
             }
@@ -227,7 +241,7 @@ header {
 
                 to {
                     opacity: 1;
-                    transform: translateX(0) rotateY(0);
+                    transform: translateX(-65px) rotateY(0);
                 }
             }
 
@@ -330,7 +344,7 @@ header {
         align-items: center;
         text-align: center;
         font-size: 77px;
-        // background: url(../img/Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_2560x1440.jpg);
+        background: url(../img/Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_2560x1440.jpg);
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -527,7 +541,7 @@ header {
 .zatichka {
     width: 100%;
     height: 100vh;
-    background: url(https://readd.org/wp-content/uploads/2020/06/photo-1540051834522-7248234b9b4d.jpg);
+    background: url(https://kartinkinaden.ru/uploads/posts/2020-07/1593808276_1-p-minimalistichnii-fon-1.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
