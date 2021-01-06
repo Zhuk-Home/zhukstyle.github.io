@@ -93,8 +93,6 @@ header {
   justify-content: space-around;
   background-color: rgba(23, 23, 50, 0.7);
   z-index: 1001;
-  opacity: 0;
-  animation: header_start 2s ease-in-out 10s forwards;
 }
 header .logo {
   position: absolute;
@@ -118,6 +116,7 @@ header nav .main {
   justify-content: center;
 }
 header nav .main > li {
+  position: relative;
   height: 40px;
   margin: 0 2%;
 }
@@ -135,8 +134,23 @@ header nav a {
   transition: background-color 0.5s ease-in-out;
   font-family: "Raleway", sans-serif;
 }
+header nav a:after {
+  position: absolute;
+  transition: 0.3s;
+  content: "";
+  width: 0px;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #f7f7f7;
+}
 header nav a:hover {
   background-color: #24244e;
+}
+header nav a:hover:after {
+  width: 100%;
+  left: 0%;
+  right: auto;
 }
 header nav .drop li {
   display: none;
@@ -219,6 +233,7 @@ header nav .main li:hover .menu6 li:last-of-type {
     transition: 1s;
   }
   header nav .main > li {
+    position: initial;
     height: 60px;
     margin: 10px 2%;
   }

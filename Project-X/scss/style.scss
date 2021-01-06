@@ -22,8 +22,8 @@ header {
     justify-content: space-around;
     background-color: rgba(23, 23, 50, 0.7);
     z-index: 1001;
-    opacity: 0;
-    animation: header_start 2s ease-in-out 10s forwards;
+    // opacity: 0;
+    // animation: header_start 2s ease-in-out 10s forwards;
 
     .logo {
         position: absolute;
@@ -50,6 +50,7 @@ header {
         }
 
         .main>li {
+            position: relative;
             height: 40px;
             margin: 0 2%;
         }
@@ -57,6 +58,8 @@ header {
         .main>li a {
             height: 100%;
             border-left: 1px solid rgba(23, 23, 50, 1);
+
+
         }
 
         a {
@@ -69,8 +72,26 @@ header {
             transition: background-color 0.5s ease-in-out;
             font-family: "Raleway", sans-serif;
 
+            &:after {
+                position: absolute;
+                transition: .3s;
+                content: '';
+                width: 0px;
+                right: 0;
+                bottom: 0;
+                height: 3px;
+                background: #f7f7f7;
+
+            }
+
             &:hover {
                 background-color: rgb(36, 36, 78);
+
+                &:after {
+                    width: 100%;
+                    left: 0%;
+                    right: auto;
+                }
             }
         }
 
@@ -177,6 +198,7 @@ header {
             }
 
             .main>li {
+                position: initial;
                 height: 60px;
                 margin: 10px 2%;
             }
