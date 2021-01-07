@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,900">
 </head>
 
 <body>
@@ -96,26 +97,113 @@
         <!-- TODO NAV End -->
     </header>
     <!-- TODO Header End -->
+    <section>
+        <div id="head_block" class="head_block">
 
-    <div id="head_block" class="head_block">
+            <div id="head_text_1" class="head_text_1">Приветствую!</div>
+            <div id="head_text_1" class="head_text_1 min_fz">Cайт создан для демонстрации различных эффектов и
+                анимаций!</div>
+            <div id="head_text_1" class="head_text_1">Приятного просмотра! :)</div>
 
-        <div id="head_text_1" class="head_text_1">Приветствую!</div>
-        <div id="head_text_1" class="head_text_1 min_fz">Cайт создан для демонстрации различных эффектов и
-            анимаций!</div>
-        <div id="head_text_1" class="head_text_1">Приятного просмотра! :)</div>
-
-        <div class="arrow_block">
-            <div class="arrow bounce" id="bounse_slide"></div>
-            <a href="#el"></a>
+            <div class="arrow_block">
+                <div class="arrow bounce" id="bounse_slide"></div>
+                <a href="#section_1"></a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div id="el" class="zatichka"></div>
+    <section id="section_1">
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="block_slide">
+                        <div class="block_slide_1">
+                            <div class="slide_1">
+                                <div class="slide_1_block_text">
+                                    <div class="slide_1_text">
+                                        <P>Эффекты наведения кнопок</P>
+                                        <p>Button Hover Effects</p>
+                                    </div>
+                                </div>
+                                <div class="slide_1_example">
+                                    <div class="container">
+                                        <a href="#" onclick="return false" class="btn btn-2">Button 1</a>
+                                        <!--End of Button 1 -->
+
+                                        <a href="#" onclick="return false" class="btn btn-3">Button 2</a>
+                                        <!--End of Button 2 -->
+
+                                        <a href="#" onclick="return false" class="btn btn-4"><span>Button 3</span></a>
+                                        <!--End of Button 3 -->
+
+                                        <a href="#" onclick="return false" class="btn btn-5">Button 4</a>
+                                        <!--End of Button 4 -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="block_slide">
+                        <div class="block_slide_2">
+                            <div class="slide_2">
+                                Slide 2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="block_slide">
+                        <div class="block_slide_3">
+                            <div class="slide_3">
+                                Slide 3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next "></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <div class="zatichka"></div>
     <div class="zatichka_2"></div>
     <div class="zatichka_3"></div>
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 500,
+            loop: false,
+            centeredSlides: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 50,
+                slideShadows: true,
+            },
+            speed: 1500,
+        });
+    </script>
 </body>
 
 </html>
