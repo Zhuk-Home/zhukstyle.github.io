@@ -1234,7 +1234,7 @@ header nav .main li:hover .menu6 li:last-of-type {
   position: relative;
   height: 80vh;
   width: 90%;
-  background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db), url(https://images.unsplash.com/photo-1482440308425-276ad0f28b19?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80) center/cover no-repeat;
+  background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db), url(../img/garrhet-sampson-CmF_5GYc6c0-unsplash.jpg) center/cover no-repeat;
   background-attachment: FIXED;
   background-blend-mode: screen;
   box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 55px 50px -35px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
@@ -1251,13 +1251,14 @@ header nav .main li:hover .menu6 li:last-of-type {
   justify-content: center;
   align-items: flex-end;
   font-size: 45px;
-  color: #363636;
-  text-shadow: 0 0 50px #a6e0cd;
+  color: #fafafa;
+  text-shadow: 0 0 7px #31584b;
   font-weight: 700;
   position: relative;
   font-family: "Roboto", sans-serif;
-  font-family: "Roboto Slab", Georgia, serif;
-  letter-spacing: 1px;
+  font-family: "Open Sans";
+  font-family: "Pacifico", cursive;
+  letter-spacing: 2px;
 }
 .swiper-container .swiper-wrapper .swiper-slide .block_slide .block_slide_1 .slide_1 .slide_1_block_text .slide_1_text {
   width: 100%;
@@ -1275,10 +1276,10 @@ header nav .main li:hover .menu6 li:last-of-type {
   left: 50%;
   width: 334px;
   height: 5px;
-  background-color: black;
+  background-color: #fafafa;
   transform: translateX(-167px);
   border-radius: 40px;
-  box-shadow: 0px 0px 20px #ffffff;
+  box-shadow: 0px 0px 10px #3e7074;
 }
 .swiper-container .swiper-wrapper .swiper-slide .block_slide .block_slide_1 .slide_1 .slide_1_example {
   width: 100%;
