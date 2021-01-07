@@ -719,8 +719,8 @@ header {
                     // background: linear-gradient(to bottom, #EDF1F2, #D5E2F2);
 
                     // background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db), url(https://images.unsplash.com/photo-1482440308425-276ad0f28b19?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80) center/cover no-repeat fixed;
-                    background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db), url(https://images.unsplash.com/photo-1482440308425-276ad0f28b19?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80) center/cover no-repeat fixed;
-
+                    background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db), url(https://images.unsplash.com/photo-1482440308425-276ad0f28b19?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80) center/cover no-repeat;
+                    background-attachment: FIXED;
                     background-blend-mode: screen;
                     box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 55px 50px -35px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
 
@@ -1010,7 +1010,7 @@ header {
                 .block_slide_1 {
                     width: 100% !important;
                     height: 100vh !important;
-
+                    background-attachment: scroll !important;
 
                     .slide_1_block_text {
                         font-size: 30px !important;
