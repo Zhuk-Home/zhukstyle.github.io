@@ -208,7 +208,7 @@ header {
             animation-delay: 0.6s;
         }
 
-        .main li:hover .menu6 li:last-of-type {
+        .main li:hover .menu6 li:nth-of-type(4) {
             display: block;
             animation: menu6 0.3s ease-in-out forwards;
             animation-delay: 0.8s;
@@ -719,12 +719,12 @@ header {
                             justify-content: center;
                             align-items: flex-end;
                             font-size: 65px;
-                            color: #fafafa;
+                            color: #d7fffb;
                             text-shadow: 0 0 7px #234742, 0 0 10px #76c5bb, 0 0 27px #abeee5;
-                            font-weight: 700;
                             position: relative;
                             font-family: 'Pacifico', cursive;
                             letter-spacing: 2px;
+                            cursor: default;
 
                             .slide_1_text {
                                 width: 100%;
@@ -872,6 +872,7 @@ header {
                                     position: relative;
                                     display: inline-block;
                                     border-radius: 3px;
+                                    z-index: 1001;
 
                                     .su_button_circle {
                                         background-color: green;
@@ -885,6 +886,7 @@ header {
                                         margin-top: 0px;
                                         pointer-events: none;
                                         /*animation-timing-function: ease-in-out; */
+                                        z-index: 1001;
                                     }
 
                                     .button_su_inner {
@@ -900,12 +902,12 @@ header {
                                         transition: 400ms;
                                         text-decoration: none;
                                         padding: 15px;
-                                        z-index: 100000;
+                                        z-index: 1001;
 
 
                                         .button_text_container {
                                             position: relative;
-                                            z-index: 10000;
+                                            z-index: 1001;
                                         }
                                     }
 
@@ -1144,8 +1146,8 @@ header {
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            flex-wrap: wrap-reverse;
-                            padding: 100px;
+                            flex-wrap: wrap;
+                            // padding: 100px;
                             text-align: center;
                             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
                             background-color: rgba(0, 0, 0, 0.404);
@@ -1154,9 +1156,12 @@ header {
                             --inv: #fff;
 
                             .btn {
+                                width: 480px;
                                 position: relative;
                                 padding: 1.4rem 4.2rem;
                                 padding-right: 3.1rem;
+                                margin: 10px 20px 10px 20px;
+
                                 font-size: 1.4rem;
                                 color: var(--inv);
                                 letter-spacing: 1.1rem;
@@ -1335,6 +1340,8 @@ header {
                     min-height: 120vh !important;
 
                     .container {
+                        padding: 100px;
+
                         .btn {
                             padding: 1.2em !important;
                             letter-spacing: 5px !important;
@@ -1411,7 +1418,7 @@ header {
                                 align-items: center;
                                 flex-wrap: wrap;
                                 font-family: consolas;
-                                font-size: 20px;
+                                font-size: 25px;
                                 letter-spacing: 10px;
 
                                 height: 220px;

@@ -20,6 +20,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,900">
+    <!-- Анимации при скролле -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,7 +46,17 @@
         <nav>
             <ul id="menu" class="main menu">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#head_block">Home</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return false">Buttons</a>
+                    <ul class="drop menu6 menu1">
+                        <li><a href="#section_1">Normal</a></li>
+                        <li><a href="#contact_buttons">contact</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">contact</a>
                     <ul class="drop menu6 menu1">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">news</a></li>
@@ -52,7 +64,8 @@
                         <li><a href="#">about</a></li>
                     </ul>
                 </li>
-                <li><a href="#">news</a>
+                <li>
+                    <a href="#">works</a>
                     <ul class="drop menu6 menu1">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">news</a></li>
@@ -60,7 +73,8 @@
                         <li><a href="#">about</a></li>
                     </ul>
                 </li>
-                <li><a href="#">contact</a>
+                <li>
+                    <a href="#">team</a>
                     <ul class="drop menu6 menu1">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">news</a></li>
@@ -68,23 +82,8 @@
                         <li><a href="#">about</a></li>
                     </ul>
                 </li>
-                <li><a href="#">works</a>
-                    <ul class="drop menu6 menu1">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">news</a></li>
-                        <li><a href="#">contact</a></li>
-                        <li><a href="#">about</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">team</a>
-                    <ul class="drop menu6 menu1">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">news</a></li>
-                        <li><a href="#">contact</a></li>
-                        <li><a href="#">about</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">about</a>
+                <li>
+                    <a href="#">about</a>
                     <ul class="drop menu6 menu1">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">news</a></li>
@@ -122,21 +121,22 @@
                             <div class="slide_1">
                                 <div class="slide_1_block_text">
                                     <div class="slide_1_text">
-                                        <P>Эффекты кнопок</P>
-                                        <p>Button Hover Effects</p>
+                                        <P data-aos="fade-up-right" data-aos-offset="200">Эффекты кнопок</P>
+                                        <p data-aos="fade-up-left" data-aos-delay="100" data-aos-offset="200">Button
+                                            Hover Effects</p>
                                     </div>
                                 </div>
 
                                 <div class="slide_1_example">
                                     <div class="container">
-                                        <div id="btn_1" class="flip">
+                                        <div id="btn_1" class="flip" data-aos="zoom-in-up">
                                             <a href="#" onclick="return false">
                                                 <div class="front">FLIP</div>
                                                 <div class="back">FLIP</div>
                                             </a>
                                         </div>
 
-                                        <div id="btn_2" class="button_su">
+                                        <div id="btn_2" class="button_su" data-aos="zoom-in-up" data-aos-delay="100">
                                             <span class="su_button_circle">
                                             </span>
                                             <a href="#" onclick="return false" class="button_su_inner">
@@ -146,14 +146,14 @@
                                             </a>
                                         </div>
 
-                                        <div id="btn_3">
+                                        <div id="btn_3" data-aos="zoom-in-up" data-aos-delay="200">
                                             <span class="btn_3">
                                                 <a href="#" onclick="return false"></a>
                                                 Button 3
                                             </span>
                                         </div>
 
-                                        <div id="btn_4">
+                                        <div id="btn_4" data-aos="zoom-in-up" data-aos-delay="300">
                                             <a href="#" onclick="return false">Button 4</a>
                                         </div>
 
@@ -171,12 +171,16 @@
 
                                 <div class="slide_2_example">
                                     <div class="container">
-                                        <div class="btn from-left">From Left</div>
-                                        <div class="btn from-top">From Top</div>
-                                        <div class="btn from-bottom">From Bottom</div>
-                                        <div class="btn from-right">From Right</div>
-                                        <div class="btn from-center">From Center</div>
-
+                                        <div class="btn from-left" data-aos="zoom-in-left"
+                                            data-aos-anchor-placement="left-right">From Left</div>
+                                        <div class="btn from-center">From
+                                            Center</div>
+                                        <div class="btn from-right">From
+                                            Right</div>
+                                        <div class="btn from-top">From Top
+                                        </div>
+                                        <div class="btn from-bottom">From
+                                            Bottom</div>
                                     </div>
                                 </div>
                             </div>
@@ -243,6 +247,7 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
