@@ -122,23 +122,41 @@
                             <div class="slide_1">
                                 <div class="slide_1_block_text">
                                     <div class="slide_1_text">
-                                        <P>Эффекты наведения кнопок</P>
+                                        <P>Эффекты кнопок</P>
                                         <p>Button Hover Effects</p>
                                     </div>
                                 </div>
+
                                 <div class="slide_1_example">
                                     <div class="container">
-                                        <a href="#" onclick="return false" class="btn btn-2">Button 1</a>
-                                        <!--End of Button 1 -->
+                                        <div id="btn_1" class="flip">
+                                            <a href="#" onclick="return false">
+                                                <div class="front">FLIP</div>
+                                                <div class="back">FLIP</div>
+                                            </a>
+                                        </div>
 
-                                        <a href="#" onclick="return false" class="btn btn-3">Button 2</a>
-                                        <!--End of Button 2 -->
+                                        <div id="btn_2" class="button_su">
+                                            <span class="su_button_circle">
+                                            </span>
+                                            <a href="#" onclick="return false" class="button_su_inner">
+                                                <span class="button_text_container">
+                                                    Button 2
+                                                </span>
+                                            </a>
+                                        </div>
 
-                                        <a href="#" onclick="return false" class="btn btn-4"><span>Button 3</span></a>
-                                        <!--End of Button 3 -->
+                                        <div id="btn_3">
+                                            <span class="btn_3">
+                                                <a href="#" onclick="return false"></a>
+                                                Button 3
+                                            </span>
+                                        </div>
 
-                                        <a href="#" onclick="return false" class="btn btn-5">Button 4</a>
-                                        <!--End of Button 4 -->
+                                        <div id="btn_4">
+                                            <a href="#" onclick="return false">Button 4</a>
+                                        </div>
+
                                     </div>
                                 </div>
 
@@ -175,7 +193,7 @@
 
     <div class="zatichka"></div>
     <div class="zatichka_2"></div>
-    <div class="zatichka_3"></div>
+
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
@@ -183,7 +201,7 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
-            spaceBetween: 500,
+            spaceBetween: 1000,
             loop: false,
             centeredSlides: true,
             pagination: {
@@ -203,6 +221,56 @@
             },
             speed: 1500,
         });
+
+        $('.button--bubble').each(function () {
+            var $circlesTopLeft = $(this).parent().find('.circle.top-left');
+            var $circlesBottomRight = $(this).parent().find('.circle.bottom-right');
+
+            var tl = new TimelineLite();
+            var tl2 = new TimelineLite();
+
+            var btTl = new TimelineLite({ paused: true });
+
+            tl.to($circlesTopLeft, 1.2, { x: -25, y: -25, scaleY: 2, ease: SlowMo.ease.config(0.1, 0.7, false) });
+            tl.to($circlesTopLeft.eq(0), 0.1, { scale: 0.2, x: '+=6', y: '-=2' });
+            tl.to($circlesTopLeft.eq(1), 0.1, { scaleX: 1, scaleY: 0.8, x: '-=10', y: '-=7' }, '-=0.1');
+            tl.to($circlesTopLeft.eq(2), 0.1, { scale: 0.2, x: '-=15', y: '+=6' }, '-=0.1');
+            tl.to($circlesTopLeft.eq(0), 1, { scale: 0, x: '-=5', y: '-=15', opacity: 0 });
+            tl.to($circlesTopLeft.eq(1), 1, { scaleX: 0.4, scaleY: 0.4, x: '-=10', y: '-=10', opacity: 0 }, '-=1');
+            tl.to($circlesTopLeft.eq(2), 1, { scale: 0, x: '-=15', y: '+=5', opacity: 0 }, '-=1');
+
+            var tlBt1 = new TimelineLite();
+            var tlBt2 = new TimelineLite();
+
+            tlBt1.set($circlesTopLeft, { x: 0, y: 0, rotation: -45 });
+            tlBt1.add(tl);
+
+            tl2.set($circlesBottomRight, { x: 0, y: 0 });
+            tl2.to($circlesBottomRight, 1.1, { x: 30, y: 30, ease: SlowMo.ease.config(0.1, 0.7, false) });
+            tl2.to($circlesBottomRight.eq(0), 0.1, { scale: 0.2, x: '-=6', y: '+=3' });
+            tl2.to($circlesBottomRight.eq(1), 0.1, { scale: 0.8, x: '+=7', y: '+=3' }, '-=0.1');
+            tl2.to($circlesBottomRight.eq(2), 0.1, { scale: 0.2, x: '+=15', y: '-=6' }, '-=0.2');
+            tl2.to($circlesBottomRight.eq(0), 1, { scale: 0, x: '+=5', y: '+=15', opacity: 0 });
+            tl2.to($circlesBottomRight.eq(1), 1, { scale: 0.4, x: '+=7', y: '+=7', opacity: 0 }, '-=1');
+            tl2.to($circlesBottomRight.eq(2), 1, { scale: 0, x: '+=15', y: '-=5', opacity: 0 }, '-=1');
+
+            tlBt2.set($circlesBottomRight, { x: 0, y: 0, rotation: 45 });
+            tlBt2.add(tl2);
+
+            btTl.add(tlBt1);
+            btTl.to($(this).parent().find('.button.effect-button'), 0.8, { scaleY: 1.1 }, 0.1);
+            btTl.add(tlBt2, 0.2);
+            btTl.to($(this).parent().find('.button.effect-button'), 1.8, { scale: 1, ease: Elastic.easeOut.config(1.2, 0.4) }, 1.2);
+
+            btTl.timeScale(2.6);
+
+            $(this).on('mouseover', function () {
+                btTl.restart();
+            });
+        });
+    </script>
+    <script>
+
     </script>
 </body>
 
