@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,900">
     <!-- Анимации при скролле -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -120,23 +120,24 @@
                         <div class="block_slide_1">
                             <div class="slide_1">
                                 <div class="slide_1_block_text">
+                                    <!-- data-aos="fade-up-left" -->
                                     <div class="slide_1_text">
-                                        <P data-aos="fade-up-right" data-aos-offset="200">Эффекты кнопок</P>
-                                        <p data-aos="fade-up-left" data-aos-delay="100" data-aos-offset="200">Button
+                                        <P>Эффекты кнопок</P>
+                                        <p>Button
                                             Hover Effects</p>
                                     </div>
                                 </div>
 
                                 <div class="slide_1_example">
                                     <div class="container">
-                                        <div id="btn_1" class="flip" data-aos="zoom-in-up">
+                                        <div id="btn_1" class="flip">
                                             <a href="#" onclick="return false">
                                                 <div class="front">FLIP</div>
                                                 <div class="back">FLIP</div>
                                             </a>
                                         </div>
 
-                                        <div id="btn_2" class="button_su" data-aos="zoom-in-up" data-aos-delay="100">
+                                        <div id="btn_2" class="button_su">
                                             <span class="su_button_circle">
                                             </span>
                                             <a href="#" onclick="return false" class="button_su_inner">
@@ -146,14 +147,14 @@
                                             </a>
                                         </div>
 
-                                        <div id="btn_3" data-aos="zoom-in-up" data-aos-delay="200">
+                                        <div id="btn_3">
                                             <span class="btn_3">
                                                 <a href="#" onclick="return false"></a>
                                                 Button 3
                                             </span>
                                         </div>
 
-                                        <div id="btn_4" data-aos="zoom-in-up" data-aos-delay="300">
+                                        <div id="btn_4">
                                             <a href="#" onclick="return false">Button 4</a>
                                         </div>
 
@@ -219,10 +220,12 @@
                                             </a>
                                         </div>
 
-                                        <div class="neon_button3">
-                                            <h2 class="neon_button3_title">
-                                                Neon But<span class="first">t</span>on
-                                            </h2>
+                                        <div class="neon_block_button3">
+                                            <div class="neon_button3">
+                                                <h2 class="neon_button3_title">
+                                                    Neon But<span class="first">t</span>on
+                                                </h2>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -266,10 +269,10 @@
             effect: 'coverflow',
             coverflowEffect: {
                 rotate: 10,
-                stretch: 50,
+                stretch: 20,
                 slideShadows: true,
             },
-            speed: 1000,
+            speed: 2000,
         });
 
         $('.button--bubble').each(function () {
