@@ -1,3 +1,8 @@
+// TODO Preloader
+$(window).on('load', function () {
+    $('#preloader').fadeOut().end().delay(4000).fadeOut('slow');
+});
+// TODO Preloader End
 // TODO Анимация текста в хедере / Animation of text in the header
 function aaa(selector, interval) {
 	var $elems = $(selector);
@@ -14,12 +19,8 @@ function aaa(selector, interval) {
 
 aaa('.head_block > .head_text_1', 7000) 
 // TODO End Animation
-$(document).ready(function(){
-// TODO Preloader
-$(window).on('load', function() {
-    $('#preloader').fadeOut().end().delay(4000).fadeOut('slow');
-  });
-// TODO Preloader End
+
+
 // TODO Navigation Start
 // Найти все ссылки начинающиеся на #
 const anchors = document.querySelectorAll('a[href^="#"]')
@@ -188,4 +189,3 @@ $('.button--bubble').each(function () {
     });
 });
 // TODO Swiper End
-});
