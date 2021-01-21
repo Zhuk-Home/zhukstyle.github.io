@@ -773,7 +773,7 @@ header {
   background-color: rgba(23, 23, 50, 0.7);
   z-index: 1001;
   opacity: 0;
-  animation: header_start 2s ease-in-out forwards;
+  animation: header_start 2s ease-in-out 10s forwards;
 }
 header .logo {
   position: absolute;
