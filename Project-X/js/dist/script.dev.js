@@ -1,11 +1,6 @@
 "use strict";
 
-// TODO Preloader
-$(window).on('load', function () {
-  $('#preloader').fadeOut().end().delay(4000).fadeOut('slow');
-}); // TODO Preloader End
 // TODO Анимация текста в хедере / Animation of text in the header
-
 function aaa(selector, interval) {
   var $elems = $(selector);
   $elems.slice(1).hide();
