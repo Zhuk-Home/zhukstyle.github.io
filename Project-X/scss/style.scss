@@ -1,6 +1,6 @@
 @import "_nullstyle";
 @import "_swiperjs";
-@import "aos.scss";
+// @import "aos.scss";
 
 /* 
 TODO Fonts
@@ -16,85 +16,91 @@ body {
     background: #000;
 }
 
-// TODO Preloader
-.preloader {
+// TODO Preloader Start
+
+#preloader {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ffffff;
-    z-index: 1001;
+    background-color: #091125;
+    z-index: 1002;
+
+    #loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #8856ff;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #ff478d;
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite;
+    }
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #ffff37;
+        -webkit-animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite;
+    }
 }
 
-// Here is where the magic happens
-
-$offset: 187;
-$duration: 1.4s;
-
-.spinner {
-    animation: rotator $duration linear infinite;
-}
-
-@keyframes rotator {
+@-webkit-keyframes spin {
     0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     }
 
     100% {
-        transform: rotate(270deg);
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
-.path {
-    stroke-dasharray: $offset;
-    stroke-dashoffset: 0;
-    transform-origin: center;
-    animation:
-        dash $duration ease-in-out infinite,
-        colors ($duration*4) ease-in-out infinite;
-}
-
-@keyframes colors {
+@keyframes spin {
     0% {
-        stroke: #4285F4;
-    }
-
-    25% {
-        stroke: #DE3E35;
-    }
-
-    50% {
-        stroke: #F7C223;
-    }
-
-    75% {
-        stroke: #1B9A59;
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
 
     100% {
-        stroke: #4285F4;
-    }
-}
-
-@keyframes dash {
-    0% {
-        stroke-dashoffset: $offset;
-    }
-
-    50% {
-        stroke-dashoffset: $offset/4;
-        transform: rotate(135deg);
-    }
-
-    100% {
-        stroke-dashoffset: $offset;
-        transform: rotate(450deg);
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 // TODO Preloader End
+
 // TODO Start Header
 header {
     position: fixed;
@@ -105,7 +111,8 @@ header {
     background-color: rgba(23, 23, 50, 0.7);
     z-index: 1001;
     opacity: 0;
-    animation: header_start 2s ease-in-out 10s forwards;
+    // animation: header_start 2s ease-in-out 10s forwards;
+    animation: header_start 2s ease-in-out forwards;
 
     .logo {
         position: absolute;
@@ -246,8 +253,10 @@ header {
 // TODO END Header
 // TODO Header Mobile Start
 @media (max-width: 767px) {
-    body.lock {
-        overflow: hidden;
+    body {
+        .lock {
+            overflow: hidden;
+        }
     }
 
     header {
@@ -268,7 +277,7 @@ header {
         nav {
 
             .main {
-                display: block;
+                display: none;
                 position: absolute;
                 top: -1000px;
                 right: -1000px;
@@ -1020,7 +1029,7 @@ header {
                     height: 80vh;
                     width: 90%;
                     background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db), url(../img/garrhet-sampson-CmF_5GYc6c0-unsplash.jpg) center/cover no-repeat;
-                    background-attachment: FIXED;
+                    // background-attachment: FIXED;
                     background-blend-mode: screen;
                     box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 55px 50px -35px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
                     z-index: -1;
@@ -2323,12 +2332,8 @@ header {
     .section_2 {
         position: relative;
         background-color: #0093E9;
-        background-color: #4158D0;
-
         background-image: linear-gradient(109.6deg, rgba(5, 84, 94, 1) 16%, #bbb 91.1%);
-
         background: url(https://images.unsplash.com/photo-1600087626120-062700394a01?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3Dhttps://unsplash.com/photos/DsJw-V-Wz-4auto=format&fit=crop&w=1350&q=80)center/cover no-repeat fixed, linear-gradient(109.6deg, rgba(5, 84, 94, 1) 16%, #bbb 91.1%);
-        // background: linear-gradient(109.6deg, rgba(5, 84, 94, 1) 16%, #bbb 91.1%);
         background-blend-mode: screen;
         width: 100%;
         height: 100%;
@@ -2344,11 +2349,7 @@ header {
             top: -50px;
             color: #fff;
             font-family: 'Pacifico', cursive;
-
         }
-
-
-
 
         .block_nav {
             min-height: 244px;
@@ -2696,9 +2697,10 @@ header {
         left: -250px !important;
     }
 
-    // .section_2 {
-    //     padding-top: 300px !important;
-    // }
+    .section_2 {
+        // padding-top: 300px !important;
+        background-attachment: scroll !important;
+    }
 }
 
 @media (max-width: 680px) {
