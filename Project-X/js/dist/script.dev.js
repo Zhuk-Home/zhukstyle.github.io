@@ -107,7 +107,7 @@ jQuery(document).ready(function () {
 
   AOS.init({
     // Global settings:
-    disable: true,
+    disable: 'phone',
     // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
     startEvent: 'DOMContentLoaded',
     // name of the event dispatched on the document, that AOS should initialize on

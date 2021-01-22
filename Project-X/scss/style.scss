@@ -3362,6 +3362,13 @@ header {
     }
 }
 
+@media(max-width: 680px) {
+    .section_3_1 {
+        background-size: 100% 100%;
+        animation: none !important;
+    }
+}
+
 .section_3_2 {
     top: 0px;
     left: 0px;

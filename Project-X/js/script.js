@@ -86,7 +86,7 @@ $( ".button_su_inner" ).mouseenter(function(e) {
 //  TODO AOS Start
 AOS.init({
   // Global settings:
-  disable: true, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  disable: 'phone', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
   startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
   initClassName: 'aos-init', // class applied after initialization
   animatedClassName: 'aos-animate', // class applied on animation
