@@ -1,4 +1,3 @@
-
 // TODO Анимация текста в хедере / Animation of text in the header
 function aaa(selector, interval) {
 	var $elems = $(selector);
@@ -12,7 +11,7 @@ function aaa(selector, interval) {
     $elems.eq(elemId).show();
   }, interval);
 }
-
+ 
 aaa('.head_block > .head_text_1', 7000) 
 // TODO End Animation
 // TODO Navigation Start
@@ -35,7 +34,7 @@ for(let anchor of anchors) {
 }
 // TODO Navigation End
 // TODO Arrows Bounse Start
-
+jQuery(document).ready(function () {
 $(".bounse_slide").on("click","a", function (event) {
     //отменяем стандартную обработку нажатия по ссылке
     event.preventDefault();
@@ -85,13 +84,9 @@ $( ".button_su_inner" ).mouseenter(function(e) {
  });
 // TODO Bubble Button End
 //  TODO AOS Start
-AOS.init();
-
-// You can also pass an optional settings object
-// below listed default settings
 AOS.init({
   // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  disable: true, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
   startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
   initClassName: 'aos-init', // class applied after initialization
   animatedClassName: 'aos-animate', // class applied on animation
@@ -183,3 +178,12 @@ $('.button--bubble').each(function () {
     });
 });
 // TODO Swiper End
+
+
+
+
+
+
+
+
+})
