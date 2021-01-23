@@ -449,7 +449,6 @@ header {
 // TODO Header Mobile End
 // TODO Section 1 Start
 .head {
-    // .head_block
 
     &_block {
         width: 100%;
@@ -462,6 +461,7 @@ header {
         text-align: center;
         font-size: 77px;
         background: url(../img/Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_2560x1440.jpg);
+        // background: url(../img/1/pexels-nicole-avagliano-2236713.jpg );
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -469,8 +469,6 @@ header {
         font-family: 'Lobster', cursive;
         animation: head_block_up 4s ease-in-out;
     }
-
-    // .head_color
 
     &_text_1 {
         opacity: 0;
@@ -493,7 +491,7 @@ header {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: rgba(0, 0, 0, 0.5);
     animation: black_head 3.5s ease-in-out;
 }
 
@@ -529,7 +527,7 @@ header {
     }
 
     100% {
-        background-color: rgba(0, 0, 0, 0.493);
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -2725,6 +2723,10 @@ header {
 
                     li {
                         position: initial !important;
+
+                        a {
+                            border-left: none !important;
+                        }
                     }
                 }
 
@@ -3751,6 +3753,10 @@ header {
         @media(max-width: 680px) {
             .skewed_border_anim {
                 animation: none !important;
+
+                &:before {
+                    background: none !important;
+                }
             }
         }
     }
@@ -3760,46 +3766,15 @@ header {
 // TODO Section 5 Start
 
 .box {
-    background-image: radial-gradient(circle farthest-corner at 12.3% 19.3%, rgba(85, 88, 218, 1) 0%, rgba(95, 209, 249, 1) 100.2%);
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 200, 124, 1) 0%, rgba(252, 251, 121, 1) 90%);
-    background-image: linear-gradient(109.6deg, rgba(48, 207, 208, 1) 11.2%, rgba(51, 8, 103, 1) 92.5%);
-    background-image: linear-gradient(68.6deg, rgba(252, 165, 241, 1) 1.8%, rgba(181, 255, 255, 1) 100.5%);
-    background-image: linear-gradient(112.1deg, rgba(32, 38, 57, 1) 11.4%, rgba(63, 76, 119, 1) 70.2%);
-    background: rgb(2, 0, 36);
-    background: linear-gradient(86deg, rgba(2, 0, 36, 1) 0%, rgba(12, 6, 94, 1) 21%, rgba(0, 212, 255, 1) 100%);
-    background: rgb(2, 0, 36);
-    background: linear-gradient(86deg, rgba(2, 0, 36, 1) 0%, rgba(12, 6, 94, 1) 21%, rgba(61, 37, 101, 1) 100%);
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    background-image: linear-gradient(to top, #110f35 0%, #330867 100%);
+    background: #000;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(42, 46, 111, 1) 0%, #090a19 90%);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(9, 13, 74, 1) 0%, rgba(9, 10, 25, 1) 90%);
     width: 100%;
-    height: 400px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    .block_text {
-        font-family: 'Pacifico', cursive;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        text-align: center;
-        font-size: 50px;
-        margin: 30px 0px 0px 0px;
-
-        cursor: default;
-
-        h2 {
-            width: 100%;
-        }
-
-        h3 {
-            width: 100%;
-        }
-    }
-
 
     .block_contact {
         display: flex;
@@ -3808,6 +3783,7 @@ header {
         width: 100%;
         height: 100%;
         flex-wrap: wrap;
+
 
         .telegram_button {
             position: relative;
@@ -3821,7 +3797,7 @@ header {
             -webkit-box-shadow: 0 0 10px #1c77a1, 0 0 20px #1c77a1;
             box-shadow: 0 0 10px #1c77a1, 0 0 20px #1c77a1;
             cursor: pointer;
-            margin: 0px 20px 0px 20px;
+            margin: 20px 10px;
 
 
             &:hover {
@@ -3891,7 +3867,7 @@ header {
             -webkit-box-shadow: 0 0 10px #63308a, 0 0 20px #63308a;
             box-shadow: 0 0 10px #63308a, 0 0 20px #63308a;
             cursor: pointer;
-            margin: 0px 20px 0px 20px;
+            margin: 20px 10px;
 
 
             &:hover {
@@ -3953,7 +3929,7 @@ header {
             background-color: #295396;
             box-shadow: 0 0 10px #295396, 0 0 20px #295396;
             cursor: pointer;
-            margin: 0px 20px 0px 20px;
+            margin: 20px 10px;
             border: 4px solid #295396;
             box-sizing: border-box;
             transform: scale(1.1);
@@ -4015,7 +3991,7 @@ header {
             background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
             box-shadow: 0 0 10px #d6249f, 0 0 20px #6343C9;
             cursor: pointer;
-            margin: 0px 20px 0px 20px;
+            margin: 20px 10px;
             border: 8px solid radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
             box-sizing: border-box;
             transform: scale(1.1);
@@ -4075,7 +4051,7 @@ header {
             background: #1DA1F2;
             box-shadow: 0 0 10px #1DA1F2, 0 0 20px #1DA1F2;
             cursor: pointer;
-            margin: 0px 20px 0px 20px;
+            margin: 20px 10px;
             border: 8px solid #1DA1F2;
             box-sizing: border-box;
             transform: scale(1);
@@ -4135,7 +4111,7 @@ header {
             background: #DA2727;
             box-shadow: 0 0 10px #DA2727, 0 0 20px #DA2727;
             cursor: pointer;
-            margin: 0px 20px 0px 20px;
+            margin: 20px 10px;
             border: 8px solid #DA2727;
             box-sizing: border-box;
             transform: scale(1);
@@ -4197,7 +4173,7 @@ header {
             -webkit-box-shadow: 0 0 10px #b8b8b8, 0 0 20px #b8b8b8;
             box-shadow: 0 0 10px #b8b8b8, 0 0 20px #b8b8b8;
             cursor: pointer;
-            margin: 0px 20px 0px 20px;
+            margin: 20px 10px;
             border: 8px solid #fff;
             box-sizing: border-box;
 
@@ -4225,8 +4201,8 @@ header {
             }
 
             img {
-                width: 130%;
-                transform: translate(-5px, -5px);
+                width: 100%;
+                // transform: translate(-5px, -5px);
             }
 
             @-webkit-keyframes gmail_button {
@@ -4264,8 +4240,323 @@ header {
 }
 
 // TODO Section 5 End
+// TODO Section 6 Start
+#section_5 {
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    z-index: -1;
+
+    .section_5_wrapper {
+        position: absolute;
+        width: 100%;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
+        z-index: -2;
+
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            z-index: 1;
+            backdrop-filter: blur(5px);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .block_text {
+            position: absolute;
+            top: 10%;
+
+            font-family: 'Pacifico', cursive;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            font-size: 50px;
+
+            cursor: default;
+
+            h2 {
+                width: 100%;
+            }
+
+            h3 {
+                width: 100%;
+            }
+
+        }
+    }
+
+    .color {
+        position: absolute;
+        filter: blur(150px);
+        z-index: -1;
+    }
+
+    .color:nth-child(1) {
+        background: #ff359b;
+        width: 600px;
+        height: 600px;
+        top: -350px;
+    }
+
+    .color:nth-child(2) {
+        background: #00d2ff;
+        width: 500px;
+        height: 500px;
+        bottom: -150px;
+        left: 100px;
+    }
+
+    .color:nth-child(3) {
+        background: #fffd87;
+        width: 300px;
+        height: 300px;
+        bottom: 50px;
+        right: 0px;
+    }
+
+    ul {
+        position: relative;
+        display: flex;
+        z-index: 2;
+    }
+
+    ul li {
+        position: relative;
+        list-style: none;
+        margin: 10px;
+    }
+
+    ul li a {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        display: inline-block;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        font-size: 2em;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2px);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    ul li a:hover {
+        transform: translateY(-20px);
+    }
+
+    ul li a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        transform: skewX(45deg) translateX(150px);
+        transition: 0.5s;
+    }
+
+    ul li a:hover::before {
+        transform: skewX(45deg) translateX(-150px);
+    }
+}
+
+@media (max-width: 680px) {
+    #section_5 {
+        height: auto !important;
+
+
+        .section_5_wrapper {
+            position: relative !important;
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%) !important;
+            flex-direction: none !important;
+        }
+
+        .block_text {
+            position: relative !important;
+            top: 0 !important;
+            margin: 50px 0px 0px 0px;
+
+        }
+
+        ul {
+
+            display: block !important;
+            // margin: 200px 0px 0px 0px;
+
+            li {
+                margin: 30px !important;
+            }
+        }
+
+        .color {
+            display: none;
+        }
+    }
+}
+
+// TODO Section 6 End
+
 footer {
     width: 100%;
-    height: 50px;
-    background-color: #000;
+    // height: 100%;
+    // background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+
+    .footer_content {
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #fff;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .social_buttons {
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .telegram_button {
+            position: relative;
+            width: 50px;
+            height: 50px;
+
+            transition: all 0.3s ease 0s;
+            border-radius: 50%;
+            border: 5px solid #29B6F6;
+            background-color: #29B6F6;
+
+            box-shadow: 5px 5px 10px #153442;
+            cursor: pointer;
+            margin: 20px;
+
+
+            &:hover {
+                box-shadow: 5px 15px 10px #153442;
+                border: 0px solid #29B6F6;
+                transform: scale(1.2) translate(0px, -10px);
+                transition: all 0.5s ease 0s;
+                // animation: telegram_neon 1s ease infinite alternate;
+            }
+
+            &:hover img {
+                width: 100%;
+            }
+
+            a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                width: 100%;
+
+                transform: scale(1.3);
+            }
+
+            @keyframes telegram_neon {
+                0% {
+
+                    box-shadow: 0 0 10px #29B6F6, 0 0 40px #29B6F6;
+                }
+
+                100% {
+
+                    box-shadow: 0 0 10px #29B6F6, 0 0 80px #29B6F6, 0 0 40px #29B6F6;
+                }
+            }
+        }
+
+        .gmail_button {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            -webkit-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            border-radius: 50%;
+            background-color: #ffffff;
+            box-shadow: 5px 7px 10px #153442;
+            cursor: pointer;
+            margin: 20px;
+            border: 8px solid #fff;
+            box-sizing: border-box;
+
+
+            &:hover {
+                transform: scale(1.2) translate(0px, -10px);
+                transition: all 0.5s ease 0s;
+                box-shadow: 5px 17px 10px #153442;
+                border: 4px solid #fff;
+                box-sizing: border-box;
+            }
+
+            a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                width: 100%;
+                // transform: translate(-5px, -5px);
+            }
+
+            @-webkit-keyframes gmail_button {
+                0% {
+                    -webkit-box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff;
+                    box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff;
+                }
+
+                100% {
+                    -webkit-box-shadow: 0 0 10px #ffffff, 0 0 40px #fff, 0 0 80px #fff;
+                    box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+                }
+            }
+
+            @keyframes gmail_button {
+                0% {
+                    -webkit-box-shadow: 0 0 10px #fff, 0 0 40px #fff;
+                    box-shadow: 0 0 10px #fff, 0 0 40px #fff;
+                }
+
+                100% {
+                    -webkit-box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+                    box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+                }
+            }
+
+        }
+    }
 }
