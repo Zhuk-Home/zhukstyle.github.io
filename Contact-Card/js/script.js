@@ -226,6 +226,6 @@ addEventListener('mousemove', function(e) {
 var delayInMilliseconds = 2500; 
 
 setTimeout(function() {
-    alert('На данный момент карта не функционирует и отображается только в качестве примера ;-)');
+    alert('На данный момент карта отображается только в качестве примера ;-)');
     alert('Наведите курсор или нажмите на Карту');
 }, delayInMilliseconds);
