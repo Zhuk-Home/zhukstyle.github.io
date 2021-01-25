@@ -282,4 +282,8 @@ jQuery(document).ready(function () {
       btTl.restart();
     });
   }); // TODO Swiper End
+
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+    alert('Для полноценной и корректной работы сайта рекомендуем использовать PC  ;-)');
+  }
 });
