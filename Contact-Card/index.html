@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact Card</title>
+    <link rel="stylesheet" href="css/ParallaxCard(ContactME,loginForm).css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <div class="section"></div> -->
+    <canvas></canvas>
+    <canvas></canvas>
+    <div class="block_1">
+        <div class="container_box">
+            <div class="container">
+                <div class="front side">
+                    <div class="content">
+                        <h1>Daniil Zhuk</h1>
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="back side">
+                    <div class="content">
+                        <h2>Contact Me</h2>
+                        <div class="login_form_box">
+                            <form action="telegram.php" method="POST">
+                                <div class="inputBox">
+                                    <input type="text" name="name" autocomplete="off" required
+                                        onkeyup="this.setAttribute('value', this.value);" value="">
+                                    <label>Your name</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input type="email" name="email" autocomplete="off" required value=""
+                                        onkeyup="this.setAttribute('value', this.value);">
+                                    <label>Your email</label>
+                                </div>
+                                <div class="inputBox">
+                                    <textarea name="message" autocomplete="off" required value=""
+                                        onkeyup="this.setAttribute('value', this.value);"></textarea>
+                                    <label class="textarea_label">Your message...</label>
+                                </div>
+                                <button type="submit" name="Send">Send</button>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
