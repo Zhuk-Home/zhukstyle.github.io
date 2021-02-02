@@ -223,9 +223,9 @@ addEventListener('mousemove', function(e) {
 	source = { 'x': e.clientX, 'y': e.clientY };
 }, false);
 
-var delayInMilliseconds = 2500; 
+// var delayInMilliseconds = 2500; 
 
-setTimeout(function() {
-    alert('На данный момент карта отображается только в качестве примера ;-)');
-    alert('Наведите курсор или нажмите на Карту');
-}, delayInMilliseconds);
+// setTimeout(function() {
+//     alert('На данный момент карта отображается только в качестве примера ;-)');
+//     alert('Наведите курсор или нажмите на Карту');
+// }, delayInMilliseconds);
